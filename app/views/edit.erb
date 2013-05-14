@@ -1,6 +1,6 @@
 <div class="container">
 
-<form action='/new-post' method='post'>
+<form action='/edit-post/<%= @edit_key %>' method='post'>
 
   <p> Category: </p>
     <input type="radio" name="category" value="tenetur">tenetur<br>
@@ -9,15 +9,15 @@
     <input type="radio" name="category" value="eos">eos<br>
     <input type="radio" name="category" value="magnam">magnam
   <p>
-  <input type='textarea' name='title' placeholder="Title"></input>
+  <input type='textarea' name='title' value="<%= @title %>"></input>
   <br>
 
-  <input type='textarea' name='description' placeholder="Description"></input>
+  <input type='textarea' name='description' value="<%= @description %>"></input>
   <br>
 
-  <input type='textarea' name='price' placeholder="Price ($)" maxlength="5" cols = "5"></input>
+  <input type='textarea' name='price' value="<%= @price %>" maxlength="5" cols = "5"></input>
   <br>
-  <input type='textarea' name='email' placeholder="Email"></input>
+  <input type='textarea' name='email' value="<%= @email %>"></input>
   <p>
 
   <input type='submit'></input>

@@ -7,11 +7,39 @@ get '/new' do
   erb :new
 end
 
+get '/share_edit_url/:key' do
+  @key = params[:key]
+  erb :share_edit_url
+end
+
 get '/:word' do
 @word = params[:word]
 @category = Category.find_by_name(@word).id
 @posts = Post.find_all_by_category_id(@category)
 erb :post
+end
+
+get '/edit/:key' do
+
+@edit_key = params[:key]
+@title = Post.find_by_edit_key(@edit_key).title
+@description = Post.find_by_edit_key(@edit_key).description
+@email = Post.find_by_edit_key(@edit_key).email
+@price = Post.find_by_edit_key(@edit_key).price
+erb :edit
+end
+
+post '/edit-post/:key' do
+
+@category_id = Category.find_by_name(params[:category]).id
+post = Post.find_by_edit_key(params[:key])
+
+post.update_attributes(:title => params[:title].gsub(/\s+/, ""), 
+            :description => params[:description], 
+            :price => params[:price], 
+            :email => params[:email], 
+            :category_id => @category_id) 
+redirect '/'
 end
 
 get '/:word/:word2' do
@@ -35,11 +63,7 @@ Post.create(:title => params[:title].gsub(/\s+/, ""),
             :category_id => @category_id,
             :edit_key => @edit_key) 
 
-redirect '/'
+redirect "/share_edit_url/#{@edit_key}"
 end
 
-get '/edit/:key' do
 
-@edit_key = params[:key]
-erb :edit
-end
