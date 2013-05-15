@@ -45,11 +45,11 @@ post '/edit-post/:key' do
   @category_id = Category.find_by_name(params[:category]).id
   post = Post.find_by_edit_key(params[:key])
 
-  post.update_attributes(:title => params[:title].gsub(/\s+/, ""), 
-    :description => params[:description], 
-    :price => params[:price], 
-    :email => params[:email], 
-    :category_id => @category_id) 
+  post.update_attributes(:title => params[:title].gsub(/\s+/, ""),
+    :description => params[:description],
+    :price => params[:price],
+    :email => params[:email],
+    :category_id => @category_id)
   redirect '/'
 end
 
@@ -68,12 +68,12 @@ post '/new-post' do
 
   @edit_key = (("A".."Z").to_a+(0..9).to_a).sample(6).join
 
-  Post.create(:title => params[:title].gsub(/\s+/, ""), 
-    :description => params[:description], 
-    :price => params[:price], 
-    :email => params[:email], 
+  Post.create(:title => params[:title].gsub(/\s+/, ""),
+    :description => params[:description],
+    :price => params[:price],
+    :email => params[:email],
     :category_id => @category_id,
-    :edit_key => @edit_key) 
+    :edit_key => @edit_key)
 
   redirect "/share_edit_url/#{@edit_key}"
 end

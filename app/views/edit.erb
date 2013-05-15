@@ -1,27 +1,27 @@
-<div class="container">
+<div class="item-container">
 
 <form action='/edit-post/<%= @edit_key %>' method='post'>
 
   <h2 id="show_editation">Edit your post</h2>
   <div id="form_editation">
-  <input type='textarea' name='title' value="<%= @title %>"></input>
+  <input type='textarea' name='title' value="<%= @title %>" required></input>
   <br>
 
   <input type='textarea' name='description' value="<%= @description %>"></input>
   <br>
 
-  <input type='textarea' name='price' value="<%= @price %>" maxlength="5" cols = "5"></input>
+  <input type='textarea' name='price' value="<%= @price %>" maxlength="10" cols = "10" required></input>
   <br>
-  <input type='textarea' name='email' value="<%= @email %>"></input>
+  <input type='textarea' name='email' value="<%= @email %>" required></input>
   <p>
 
-    <select name="category">
+    <select name="category" required>
      <option value="">Choose a Category</option>
-     <option value="tenetur">Tenetur</option>
-     <option value="labore">Labore</option>
-     <option value="neque">Neque</option>
-     <option value="eos">Eos</option>
-     <option value="magnam">Magnam</option>
+     <option value="aut">Aut</option>
+     <option value="officiis">Officiis</option>
+     <option value="nihil">Nihil</option>
+     <option value="minus">Minus</option>
+     <option value="quia">Quia</option>
     </select>
   <p>
 

@@ -1,20 +1,20 @@
-<div class="container">
+<div class="new-inputs">
 
 <form action='/new-post' method='post'>
 
-  <input type='textarea' name='title' placeholder="Title"></input>
+  <input type='textarea' name='title' placeholder="Title*" required></input>
   <br>
 
   <input type='textarea' name='description' placeholder="Description"></input>
   <br>
 
-  <input type='textarea' name='price' placeholder="Price ($)" maxlength="5" cols = "5"></input>
+  <input type='textarea' name='price' placeholder="Price ($)*" maxlength="10" cols = "10" required></input>
   <br>
-  <input type='textarea' name='email' placeholder="Email"></input>
+  <input type='textarea' name='email' placeholder="Email*" required></input>
   <p>
 
-  <p> Category: </p>
-    <select name="category">
+    <select name="category" required>
+     <option value="">Choose a Category</option>
      <option value="tenetur">Tenetur</option>
      <option value="labore">Labore</option>
      <option value="neque">Neque</option>
@@ -23,15 +23,8 @@
     </select>
   <p>
 
-    
+
 
   <input type='submit'></input>
 </form>
 </div>
-
-
-<!-- <form action='/anagram' method='get'>
-    <input type='text' name='word' placeholder="Word"></input>
-    <input type='submit'></input>
-  </form>
- -->

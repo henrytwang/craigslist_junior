@@ -4,7 +4,7 @@ src: url(../fonts/BebasNeue.otf);
 }
 
 @font-face {
-font-family: [set]Foundicons;
+font-family: Foundicons;
 src: url(../fonts/general_foundicons.ttf) format('truetype');
 }
 
@@ -22,21 +22,36 @@ body {
 h2 {
 font-family: BebasNeue;
 font-size: 30px;
+text-align: center;
 }
 
 a:link    {color:#E3CEAE;}
 a:visited {color:#AC6A04;}
-a:hover   {color:red;}
+a:hover   {color:#AC6A04;}
 
 h1 a{
   text-decoration: none;
 }
 
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  /*border: 1px dotted black;*/
+  margin: 0 auto;
+  width: 150px;
+  /*padding: 0px 20px 20px 20px;*/
+}
+
+.new-inputs {
+  margin: 0 auto;
+  width: 250px;
+}
+
+.container ul {
+  padding-left:0;
+}
+
+.item-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
 }
 
 li {
@@ -60,6 +75,7 @@ li a {
   letter-spacing:3px;
   -moz-box-shadow: 0 0 30px 10px #999;
   -webkit-box-shadow: 0 0 30px 10px #999;
+  box-shadow: 0 0 30px 10px #999;
 }
 
 .top-nav a {
@@ -91,16 +107,19 @@ li a {
 }
 
 .btm-nav {
-  text-align: left;
-  padding-left: 100px;
+  margin: 0 auto;
   line-height: 30px;
   font-size: 30px;
   font-family: BebasNeue;
   letter-spacing:3px;
   position:fixed;
-  bottom:40px;
-  width: 100%;
+  bottom:30px;
+  width:100%;
+}
 
+.btm-nav-child {
+  margin: 0 auto;
+  width:700px;
 }
 
 .btm-nav a {
@@ -116,6 +135,7 @@ li a {
   display: inline-block;
 }
 
+
 th {
   text-align: left;
 }
@@ -127,16 +147,16 @@ th {
 
 
 input {
-    border: 5px solid white; 
-    -webkit-box-shadow: 
+    border: 5px solid white;
+    -webkit-box-shadow:
       inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
-    -moz-box-shadow: 
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
       inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
-    box-shadow: 
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
       inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
+            0 0 16px rgba(0,0,0,0.1);
     padding: 15px;
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
@@ -167,11 +187,15 @@ input {
     float: right;
 }
 
-.post {
-  padding-left:45px;
-}
 
 .key-input {
-  margin: 0 auto; 
+  margin: 0 auto;
 width:260px;
+}
+
+
+.item-text {
+  position: relative;
+  text-align: left;
+  display: inline-block;
 }
