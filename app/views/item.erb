@@ -4,11 +4,23 @@
 @title = Post.find_by_name(@word2).title
 
  -->
+<div class="container">
 
+<h2>Title</h2>
+<li class="post"><%= @title %></li>
+<h2>Description</h2>
+<li class="post"><%= @description %></li>
+<h2>Email</h2>
+<li class="post"><%= @email %></li>
+<h2>Price</h2>
+<li class="post">$<%= @price %></li>
 
-      <li><%= @title %></li>
-      <li><%= @description %></li>
-      <li><%= @email %></li>
-      <li><%= @price %></li>
+</div>
 
- 
+<div class ="btm-nav">
+  <ol>
+  <li> <a class="icons" href=/new>new</a> </li>
+  <li> <a class="icons" href=/>categories</a> </li>
+  <li> <a class="icons" href=/<%= @word %>>posts</a> </li>
+</ol>
+</div>

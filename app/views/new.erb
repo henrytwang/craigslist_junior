@@ -2,13 +2,6 @@
 
 <form action='/new-post' method='post'>
 
-  <p> Category: </p>
-    <input type="radio" name="category" value="tenetur">tenetur<br>
-    <input type="radio" name="category" value="labore">labore<br>
-    <input type="radio" name="category" value="neque">neque<br>
-    <input type="radio" name="category" value="eos">eos<br>
-    <input type="radio" name="category" value="magnam">magnam
-  <p>
   <input type='textarea' name='title' placeholder="Title"></input>
   <br>
 
@@ -19,6 +12,18 @@
   <br>
   <input type='textarea' name='email' placeholder="Email"></input>
   <p>
+
+  <p> Category: </p>
+    <select name="category">
+     <option value="tenetur">Tenetur</option>
+     <option value="labore">Labore</option>
+     <option value="neque">Neque</option>
+     <option value="eos">Eos</option>
+     <option value="magnam">Magnam</option>
+    </select>
+  <p>
+
+    
 
   <input type='submit'></input>
 </form>

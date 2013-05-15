@@ -1,13 +1,21 @@
 <div class = "container">
 
-  <p>Categories </p>
+  <h2>Categories</h2>
   <ul>
     <% Category.all.each do |category| %>
       <li><a href= /<%= category.name %>> <%= category.name %> </a></li>
     <% end %>
   </ul>
+  <br>
+  <br>
+  <br>
+  
+    
 
-  <p>New: </p>
-  <a href= /new> New </a>
+</div>
 
+<div class ="btm-nav">
+  <ol>
+  <li> <a class="icons" href=/new>new</a> </li>
+</ol>
 </div>

@@ -2,13 +2,8 @@
 
 <form action='/edit-post/<%= @edit_key %>' method='post'>
 
-  <p> Category: </p>
-    <input type="radio" name="category" value="tenetur">tenetur<br>
-    <input type="radio" name="category" value="labore">labore<br>
-    <input type="radio" name="category" value="neque">neque<br>
-    <input type="radio" name="category" value="eos">eos<br>
-    <input type="radio" name="category" value="magnam">magnam
-  <p>
+  <h2 id="show_editation">Edit your post</h2>
+  <div id="form_editation">
   <input type='textarea' name='title' value="<%= @title %>"></input>
   <br>
 
@@ -20,6 +15,17 @@
   <input type='textarea' name='email' value="<%= @email %>"></input>
   <p>
 
-  <input type='submit'></input>
+    <select name="category">
+     <option value="">Choose a Category</option>
+     <option value="tenetur">Tenetur</option>
+     <option value="labore">Labore</option>
+     <option value="neque">Neque</option>
+     <option value="eos">Eos</option>
+     <option value="magnam">Magnam</option>
+    </select>
+  <p>
+
+  <input type='submit' id="submit_editation"></input>
+</div>
 </form>
 </div>
